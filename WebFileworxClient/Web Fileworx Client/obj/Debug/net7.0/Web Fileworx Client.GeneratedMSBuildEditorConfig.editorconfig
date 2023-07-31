@@ -1,0 +1,109 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Web_Fileworx_Client
+build_property.RootNamespace = Web_Fileworx_Client
+build_property.ProjectDir = C:\Users\M.AL-Shamali\Desktop\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\M.AL-Shamali\Desktop\Web Fileworx Client\WebFileworxClient\Web Fileworx Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/MainPages/AdminPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblBhZ2VzXEFkbWluUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/MainPages/LogIn.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblBhZ2VzXExvZ0luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/MainPages/NewsPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblBhZ2VzXE5ld3NQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/NotifyWindows/DeleteConfirmationWindow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZ5V2luZG93c1xEZWxldGVDb25maXJtYXRpb25XaW5kb3cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/NotifyWindows/InvalidInfoWindow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZ5V2luZG93c1xJbnZhbGlkSW5mb1dpbmRvdy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/RazorComponents/NewsDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmF6b3JDb21wb25lbnRzXE5ld3NEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Tables/NewsTable.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzXE5ld3NUYWJsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Tables/TablesItems/NewsItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzXFRhYmxlc0l0ZW1zXE5ld3NJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Tables/TablesItems/UserItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzXFRhYmxlc0l0ZW1zXFVzZXJJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Tables/UsersTable.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzXFVzZXJzVGFibGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Windows/AddUserWindow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2luZG93c1xBZGRVc2VyV2luZG93LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Windows/EditImageWindow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2luZG93c1xFZGl0SW1hZ2VXaW5kb3cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Windows/EditNewsWindow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2luZG93c1xFZGl0TmV3c1dpbmRvdy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Windows/EditUserWindow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2luZG93c1xFZGl0VXNlcldpbmRvdy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Windows/NewImageWindow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2luZG93c1xOZXdJbWFnZVdpbmRvdy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Windows/NewNewsWindow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2luZG93c1xOZXdOZXdzV2luZG93LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-h7thkc6sj5
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-2tbezfyxmx
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

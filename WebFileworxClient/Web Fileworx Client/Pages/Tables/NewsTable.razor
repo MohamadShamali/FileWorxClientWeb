@@ -1,0 +1,45 @@
+﻿@inject NewsServices newsServicies
+
+<div class="table-container">
+    <table class="w-full mt-2">
+        <thead class="cursor-default">
+        <tr>
+            <th class="p-2 border border-gray-300 bg-fw-blue text-white">Title</th>
+                <th class="p-2 border border-gray-300 bg-fw-blue text-white">Description</th>
+                <th class="p-2 border border-gray-300 bg-fw-blue text-white w-25">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var news in allNews)
+        {
+            <NewsItem News="news" IsSelected="@IsNewsSelected(news)" RowClick="OnRowClick"/>
+        }
+    </tbody>
+</table>
+</div>
+
+@code {
+
+    private bool IsNewsSelected(News news)
+    {
+        return newsServicies.SelectedNews == news;
+    }
+
+    [Parameter]
+    public EventCallback<News> OnRowClick { get; set; }
+
+    private List<News> allNews = new List<News>();
+
+    protected override void OnInitialized()
+    {
+        newsServicies.RefreshNews();
+        allNews = newsServicies.GetAllNews();
+        base.OnInitialized();
+    }
+
+
+
+
+}
+
+

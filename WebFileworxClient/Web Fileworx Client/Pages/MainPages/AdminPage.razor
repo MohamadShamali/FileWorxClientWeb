@@ -1,0 +1,127 @@
+﻿@inject UsersServices usersServicies
+@inject NavigationManager navnManager
+
+@page "/admin"
+
+<PageTitle>Users Maneger</PageTitle>
+<img class="mb-2.5 w-72" src="images/download.png" alt="download" />
+
+<div class="flex mt-1">
+    <button @onclick="addUserRequest" class="bg-fw-blue hover:bg-fw-blue-hover rounded-md mr-2 text-white p-1 cursor-pointer"><b>Add User</b></button>
+    <button @onclick="editUserRequest" class="@editButtonClass()" disabled="@removeAndEditDisable()"><b>Edit User</b></button>
+    <button @onclick="deleteUserRequest" class="@removeButtonClass()" disabled="@removeAndEditDisable()"><b>Remove User</b></button>
+        </div>
+
+        <div class="half-page">
+            <UsersTable OnRowClick="OnRowClick"/>
+        </div>
+
+@if (showAddUserWindow)
+{
+    <AddUserWindow OnSave="onSave" OnCancel="onCancel"></AddUserWindow>
+}
+@if (showDeleteUserConfirmation)
+{
+    <DeleteConfirmationWindow OnDelete="onDelete" OnCancel="onCancel"></DeleteConfirmationWindow>
+}
+@if (showEditUserWindow)
+{
+    <EditUserWindow OnSave="onSave" OnCancel="onCancel"></EditUserWindow>
+}
+
+@code {
+    private bool showAddUserWindow = false;
+    private bool showEditUserWindow = false;
+    private bool showDeleteUserConfirmation = false;
+
+    private void onDelete()
+    {
+        if(usersServicies.SelectedUser != null)
+        {
+            usersServicies.RemoveUser(usersServicies.SelectedUser);
+            usersServicies.RefreshUsers();
+        }
+
+        showDeleteUserConfirmation = false;
+    }
+
+    private void editUserRequest()
+    {
+        showEditUserWindow = true;
+    }
+
+    private void deleteUserRequest()
+    {
+        showDeleteUserConfirmation = true;
+    }
+
+    private void addUserRequest()
+    {
+        showAddUserWindow = true;
+    }
+
+    private void onCancel()
+    {
+        showAddUserWindow = false;
+        showDeleteUserConfirmation = false;
+        showEditUserWindow = false;
+    }
+    private void onSave (User user)
+    {
+        usersServicies.RemoveUser(user); //For Edit Case
+
+        usersServicies.AddUser(user);
+        usersServicies.RefreshUsers();
+        showAddUserWindow = false;
+        showEditUserWindow = false;
+    }
+
+    private string editButtonClass()
+    {
+        if (usersServicies.SelectedUser != null)
+        {
+            return "bg-fw-blue hover:bg-fw-blue-hover rounded-md mr-2 text-white p-1 cursor-pointer";
+        }
+        else
+        {
+            return "bg-disable rounded-md mr-2 text-white p-1 cursor-default";
+        }
+    }
+
+    private bool removeAndEditDisable()
+    {
+        if (usersServicies.SelectedUser != null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    private string removeButtonClass()
+    {
+        if (usersServicies.SelectedUser != null)
+        {
+            return "bg-rid hover:bg-rid-hover rounded-md mr-2 text-white p-1 cursor-pointer";
+        }
+        else
+        {
+            return "bg-disable rounded-md mr-2 text-white p-1 cursor-default";
+        }
+    }
+
+    private void OnRowClick(User user)
+    {
+        if (usersServicies.SelectedUser == user)
+        {
+            usersServicies.SelectedUser = null; // Deselect the row if it's already selected
+        }
+        
+        else
+        {
+            usersServicies.SelectedUser = user; // Select the clicked row
+        }
+    }
+}
