@@ -79,3 +79,48 @@ C:\Users\M.AL-Shamali\Desktop\Web Fileworx Client\WebFileworxClient\Web Fileworx
 C:\Users\M.AL-Shamali\Desktop\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\M.AL-Shamali\Desktop\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.JSInterop.dll
 C:\Users\M.AL-Shamali\Desktop\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.csproj.CopyComplete
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\appsettings.json
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Web Fileworx Client.staticwebassets.runtime.json
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Web Fileworx Client.exe
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Web Fileworx Client.deps.json
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Web Fileworx Client.runtimeconfig.json
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Web Fileworx Client.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Web Fileworx Client.pdb
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Blazorise.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Blazorise.Bootstrap.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Blazorise.Icons.FontAwesome.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Blazorise.Licensing.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\Microsoft.JSInterop.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.csproj.AssemblyReference.cache
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.AssemblyInfoInputs.cache
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.AssemblyInfo.cs
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.csproj.CoreCompileInputs.cache
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.RazorAssemblyInfo.cache
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.RazorAssemblyInfo.cs
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\staticwebassets\msbuild.Web Fileworx Client.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\staticwebassets\msbuild.build.Web Fileworx Client.props
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Web Fileworx Client.props
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Web Fileworx Client.props
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\scopedcss\bundle\Web Fileworx Client.styles.css
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\scopedcss\projectbundle\Web Fileworx Client.bundle.scp.css
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.csproj.CopyComplete
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\refint\Web Fileworx Client.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.pdb
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.genruntimeconfig.cache
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\ref\Web Fileworx Client.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m82PdbJVcS798/IN6pRHKobRQu7i7I4hoF3g8COoFXjckAWeDwWk3RZI0rkknN5nfifixj6SgMcOMrMxwyMR4Q==",
+  "dgSpecHash": "GG1VqjDBNhGg/dZq4jAnI6G04SM2Q9qmJQefNhyhNCaPeHdjcuegK6kpXTwukXKfT1jpsnutYZrT6EPeGyq7+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\M.AL-Shamali\\Desktop\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj",
+  "projectFilePath": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\M.AL-Shamali\\.nuget\\packages\\blazorise\\1.2.4\\blazorise.1.2.4.nupkg.sha512",
     "C:\\Users\\M.AL-Shamali\\.nuget\\packages\\blazorise.bootstrap\\1.2.4\\blazorise.bootstrap.1.2.4.nupkg.sha512",

@@ -224,12 +224,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\download.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News Images\b226539e-8d2e-4e26-8148-4403cc12bc18.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News Images\4568052b-e26f-4ec8-adc2-c1026f0840a5.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Web Fileworx Client</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Web Fileworx Client</BasePath>
-      <RelativePath>Images/News Images/b226539e-8d2e-4e26-8148-4403cc12bc18.jpg</RelativePath>
+      <RelativePath>Images/News Images/4568052b-e26f-4ec8-adc2-c1026f0840a5.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -238,14 +238,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News Images\b226539e-8d2e-4e26-8148-4403cc12bc18.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News Images\4568052b-e26f-4ec8-adc2-c1026f0840a5.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News Images\d535e032-0cbc-4fdf-afa9-ef35a03b20d3.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News Images\f9647fd9-7f1b-4a40-bd67-fd91b454eda4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Web Fileworx Client</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Web Fileworx Client</BasePath>
-      <RelativePath>Images/News Images/d535e032-0cbc-4fdf-afa9-ef35a03b20d3.jpg</RelativePath>
+      <RelativePath>Images/News Images/f9647fd9-7f1b-4a40-bd67-fd91b454eda4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -254,7 +254,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News Images\d535e032-0cbc-4fdf-afa9-ef35a03b20d3.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News Images\f9647fd9-7f1b-4a40-bd67-fd91b454eda4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\ShowedImage\FileWorx\5d25da19-af7a-40d1-874d-4c7de542a6d3.jpg))">
       <SourceType>Package</SourceType>

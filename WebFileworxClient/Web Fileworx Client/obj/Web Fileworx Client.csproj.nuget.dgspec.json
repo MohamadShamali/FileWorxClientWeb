@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\M.AL-Shamali\\Desktop\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj": {}
+    "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\M.AL-Shamali\\Desktop\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj": {
+    "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\M.AL-Shamali\\Desktop\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj",
+        "projectUniqueName": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj",
         "projectName": "Web Fileworx Client",
-        "projectPath": "C:\\Users\\M.AL-Shamali\\Desktop\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj",
+        "projectPath": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\Web Fileworx Client.csproj",
         "packagesPath": "C:\\Users\\M.AL-Shamali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\M.AL-Shamali\\Desktop\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\obj\\",
+        "outputPath": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\M.AL-Shamali\\AppData\\Roaming\\NuGet\\NuGet.Config",
