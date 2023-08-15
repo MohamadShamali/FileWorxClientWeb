@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d9/JIe4U6bYn35GyX+0UJoCa+Gu+dlj8hCD+Yfa6Ws8=",
+  "Hash": "vcLRxYCGgGpKjUcxW+ghV7n1GCpcbJjSGBnt91o4RY8=",
   "Source": "Web Fileworx Client",
   "BasePath": "_content/Web Fileworx Client",
   "Mode": "Default",
@@ -935,12 +935,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\download.png"
     },
     {
-      "Identity": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\Images\\News Images\\4568052b-e26f-4ec8-adc2-c1026f0840a5.jpg",
+      "Identity": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\Images\\News Images\\6580a369-8b6b-4733-8045-4fad26f8dcae.jpg",
       "SourceId": "Web Fileworx Client",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\",
       "BasePath": "_content/Web Fileworx Client",
-      "RelativePath": "Images/News Images/4568052b-e26f-4ec8-adc2-c1026f0840a5.jpg",
+      "RelativePath": "Images/News Images/6580a369-8b6b-4733-8045-4fad26f8dcae.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -949,24 +949,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\News Images\\4568052b-e26f-4ec8-adc2-c1026f0840a5.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\Images\\News Images\\f9647fd9-7f1b-4a40-bd67-fd91b454eda4.jpg",
-      "SourceId": "Web Fileworx Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\",
-      "BasePath": "_content/Web Fileworx Client",
-      "RelativePath": "Images/News Images/f9647fd9-7f1b-4a40-bd67-fd91b454eda4.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\News Images\\f9647fd9-7f1b-4a40-bd67-fd91b454eda4.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\News Images\\6580a369-8b6b-4733-8045-4fad26f8dcae.jpg"
     },
     {
       "Identity": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\Images\\ShowedImage\\FileWorx\\5d25da19-af7a-40d1-874d-4c7de542a6d3.jpg",

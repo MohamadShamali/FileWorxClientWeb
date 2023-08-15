@@ -124,3 +124,11 @@ C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClien
 C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.pdb
 C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\Web Fileworx Client.genruntimeconfig.cache
 C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\obj\Debug\net7.0\ref\Web Fileworx Client.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\FileworxObjectClassLibrary.dll
+C:\Users\M.AL-Shamali\Desktop\Demo Projects\Web Fileworx Client\WebFileworxClient\Web Fileworx Client\bin\Debug\net7.0\FileworxObjectClassLibrary.pdb

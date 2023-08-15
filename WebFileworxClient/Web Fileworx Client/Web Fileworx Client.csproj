@@ -16,4 +16,8 @@
     <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.2.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\FileworxObjectClassLibrary\FileworxObjectClassLibrary\FileworxObjectClassLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
