@@ -1,13 +1,15 @@
-﻿@inject NewsServices newsServicies
+﻿@inject NewsServices newsServices
 
 <div class="w-44 inline">
-    @if (selectedNews != null)
+    @if (selectedFile != null)
     {
         <div class="bg-gray-50 p-2 mt-2 rounded-2xl">
-            <p><strong class="mb-2">Title:</strong> <span>@selectedNews.Title</span></p>
-            <p><strong class="mb-2">Creation Date:</strong> <span>@selectedNews.Date</span></p>
-            @if(newsServicies.SelectedNews is not Image)
+            <p><strong class="mb-2">Title:</strong> <span>@selectedFile.Name</span></p>
+            <p><strong class="mb-2">Creation Date:</strong> <span>@selectedFile.CreatorName</span></p>
+
+            @if (selectedFile is not clsPhoto)
             {
+                clsNews selectedNews = (clsNews) selectedFile;
                 <p style="margin-bottom:0px;"><strong class="details-label">Category:</strong> <span>@selectedNews.Category</span></p>
             }
         </div>
@@ -19,7 +21,7 @@
 </div>
 
 <div class="mt-2.5">
-    @if (selectedNews != null)
+    @if (selectedFile != null)
     {
         <button @onclick="ToggleBodySection" class="@getClass(showBodySection)"><b>Show Body</b></button>
         <button @onclick="ToggleImageSection" class="@getClass(showImageSection)"><b>Show Image</b></button>
@@ -27,21 +29,21 @@
 </div>
 
 <div class="bg-gray-50 p-2 mt-2 rounded-2xl">
-    @if (selectedNews != null && showBodySection)
+    @if ((selectedFile != null) && showBodySection)
     {
         <div class="blue-box">
-            <p><strong class="details-label">Body:</strong> <span>@selectedNews.Body</span></p>
+            <p><strong class="details-label">Body:</strong> <span>@selectedFile.Body</span></p>
         </div>
     }
 
-    @if (selectedNews != null && showImageSection)
+    @if ((selectedFile != null) && showImageSection)
     {
         <div class="max-w-2xl">
-            @if (selectedNews is Image)
+            @if (selectedFile is clsPhoto)
             {
-                Image selectedImage = (Image) selectedNews;
-                string imageName = Path.GetFileName(selectedImage.ImagePath);
-                <img class="w-full" src="\Images\News Images\@imageName" alt="Image" />
+                clsPhoto selectedPhoto = (clsPhoto) selectedFile;
+                string imageName = Path.GetFileName(selectedPhoto.Location);
+                <img class="w-full" src="\Images\StoredImages\@imageName" alt="Image" />
             }
             else
             {
@@ -52,10 +54,9 @@
 </div>
 
 @code {
+
     [Parameter]
-    public News selectedNews { get; set; }
-
-
+    public clsFile selectedFile { get; set; }
     private bool showBodySection = true;
     private bool showImageSection = false;
 

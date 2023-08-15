@@ -1,20 +1,20 @@
 ﻿@inject NewsServices newsServices
 
-<tr @onclick="() => RowClick.InvokeAsync(News)" class="@GetRowClass()">
-    <td class="p-2 border border-gray-300">@News.Title</td>
-    <td class="p-2 border border-gray-300">@News.Description</td>
-    <td class="p-2 border border-gray-300">@News.Date.ToString()</td>
+<tr @onclick="() => RowClick.InvokeAsync(File)" class="@GetRowClass()">
+    <td class="p-2 border border-gray-300">@File.Name</td>
+    <td class="p-2 border border-gray-300">@File.Description</td>
+    <td class="p-2 border border-gray-300">@File.CreationDate.ToString()</td>
 </tr>
 
 @code {
     [Parameter]
-    public News News { get; set; }
+    public clsFile File { get; set; }
 
     [Parameter]
     public bool IsSelected { get; set; }
 
     [Parameter]
-    public EventCallback<News> RowClick { get; set; }
+    public EventCallback<clsFile> RowClick { get; set; }
 
 
     private string GetRowClass()

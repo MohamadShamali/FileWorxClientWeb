@@ -1,6 +1,6 @@
-﻿@inject NewsServices newsServicies
-@inject UsersServices usersServicies
-@inject NavigationManager navnManager
+﻿@inject NavigationManager navnManager
+@inject UsersServices usersServices
+@inject NewsServices newsServices
 @inject IJSRuntime JSRuntime
 
 
@@ -11,9 +11,9 @@
 <div class="flex mt-1">
     <button @onclick=addNewsRequest class="bg-fw-blue hover:bg-fw-blue-hover rounded-md mr-2 text-white p-1 cursor-pointer"><b>Add News</b></button>
     <button @onclick=addImageRequest class="bg-fw-blue hover:bg-fw-blue-hover rounded-md mr-2 text-white p-1 cursor-pointer"><b>Add Image</b></button>
-    <button @onclick="EditRequest" class="@editButtonClass()" disabled="@removeAndEditDisable()"><b>Edit Image/News</b></button>
+    <button @onclick="editRequest" class="@editButtonClass()" disabled="@removeAndEditDisable()"><b>Edit Image/News</b></button>
     <button @onclick="removeRequest" class="@removeButtonClass()" disabled="@removeAndEditDisable()"><b>Remove </b></button>
-    @if (usersServicies.loggedInUser.IsAdmin)
+    @if (usersServices.LoggedInUser.IsAdmin)
     {
         <button @onclick=openAdminTab class="mr-1 bg-prpl hover:bg-prpl-hover rounded-md text-white p-1 cursor-pointer ml-auto"><b>Admin Window</b></button>
     }
@@ -28,18 +28,18 @@
 
     <div class="flex-grow w-1/2 ">
         @if(showdetails){
-            <NewsDetails selectedNews="newsServicies.SelectedNews" />
+            <NewsDetails selectedFile="newsServices.SelectedFile"/>
         }
     </div>
 </div>
 
 @if (showAddNewsWindow)
 {
-    <NewNewsWindow OnSave="onSaveNews" OnCancel="onCancel"> </NewNewsWindow>
+    <NewNewsWindow OnSave="onAddNews" OnCancel="onCancel"> </NewNewsWindow>
 }
 @if (showAddImageWindow)
 {
-    <NewImageWindow OnSave="onSaveImage" OnCancel="onCancel"> </NewImageWindow>
+    <NewImageWindow OnSave="onAddImage" OnCancel="onCancel"> </NewImageWindow>
 }
 @if (showDeleteConfirmationWindow)
 {
@@ -47,22 +47,26 @@
 }
 @if (showEditNewsWindow)
 {
-    <EditNewsWindow OnSave="onSaveNews" OnCancel="onCancel"></EditNewsWindow>
+    <EditNewsWindow OnSave="onEditNews" OnCancel="onCancel"></EditNewsWindow>
 }
 @if (showEditImageWindow)
 {
-    <EditImageWindow OnSave="onSaveImage" OnCancel="onCancel"> </EditImageWindow>
+    <EditImageWindow OnSave="onEditImage" OnCancel="onCancel"> </EditImageWindow>
 }
 
 @code {
+
+    // Windows Appearance
     private bool showAddNewsWindow = false;
     private bool showAddImageWindow = false;
     private bool showDeleteConfirmationWindow = false;
     private bool showEditNewsWindow = false;
     private bool showEditImageWindow = false;
 
+    // Details Appearance
     private bool showdetails = true;
 
+    //Delete Confirmation
     private bool confirmDelete = false;
 
     private void openAdminTab()
@@ -79,31 +83,33 @@
     private void onConfirmDelete()
     {
         confirmDelete = true;
-        if (newsServicies.SelectedNews != null)
-        {
-            if (newsServicies.SelectedNews is Image)
-            {
-                Image selectedImage = (Image)newsServicies.SelectedNews;
 
-                newsServicies.RemoveImageTextFile(selectedImage);
-                newsServicies.RemoveImageImage(selectedImage);
+        if (newsServices.SelectedFile != null)
+        {
+            if (newsServices.SelectedFile is clsPhoto)
+            {
+                clsPhoto selectedPhoto = (clsPhoto) newsServices.SelectedFile;
+
+                selectedPhoto.Delete();
             }
 
             else
             {
-                newsServicies.RemoveNews(newsServicies.SelectedNews);
-            }
-            newsServicies.SelectedNews = null;
-            newsServicies.RefreshNews();
-        }
-        confirmDelete = false;
+                clsNews selectedNews = (clsNews) newsServices.SelectedFile;
 
+                selectedNews.Delete();
+            }
+            newsServices.SelectedFile = null;
+            newsServices.RefreshFilesList();
+        }
+
+        confirmDelete = false;
         showDeleteConfirmationWindow = false;
     }
 
-    private void EditRequest()
+    private void editRequest()
     {
-        if(newsServicies.SelectedNews is Image)
+        if (newsServices.SelectedFile is clsPhoto)
         {
             showEditImageWindow = true;
         }
@@ -126,33 +132,37 @@
         showEditImageWindow = false;
     }
 
-    private void onSaveNews(News news)
+    private void onAddNews(clsNews addedNews)
     {
-        newsServicies.RemoveNews(news); //For Edit Case
-
-        newsServicies.AddNews(news);
-        newsServicies.RefreshNews();
+        addedNews.Insert();
+        newsServices.RefreshFilesList();
 
         showAddNewsWindow = false;
+    }
+
+    private void onEditNews(clsNews editedNews)
+    {
+        editedNews.Update();
+        newsServices.RefreshFilesList();
+
         showEditNewsWindow = false;
     }
 
-    private void onSaveImage(Image image)
+    private void onAddImage(clsPhoto addedPhoto)
     {
-       // newsServicies.RemoveImage(image); //delete old image and text file
-
-        newsServicies.AddImage(image);
-        newsServicies.RefreshNews();
-        showdetails = false;
+        addedPhoto.Insert();
+        newsServices.RefreshFilesList();
 
         showAddImageWindow = false;
-        showEditImageWindow = false;
-
-        newsServicies.SelectedNews = null;
-
-        showdetails = true;
     }
 
+    private void onEditImage(clsPhoto addedPhoto)
+    {
+        addedPhoto.Update();
+        newsServices.RefreshFilesList();
+
+        showEditImageWindow = false;
+    }
 
     private void addNewsRequest()
     {
@@ -166,7 +176,7 @@
 
     private string removeButtonClass()
     {
-        if (newsServicies.SelectedNews != null)
+        if (newsServices.SelectedFile != null)
         {
             return "bg-rid hover:bg-rid-hover rounded-md mr-2 text-white p-1 cursor-pointer";
         }
@@ -178,7 +188,7 @@
 
     private bool removeAndEditDisable()
     {
-        if (newsServicies.SelectedNews != null)
+        if (newsServices.SelectedFile != null)
         {
             return false;
         }
@@ -190,7 +200,7 @@
 
     private string editButtonClass()
     {
-        if (newsServicies.SelectedNews != null)
+        if (newsServices.SelectedFile != null)
         {
             return "bg-fw-blue hover:bg-fw-blue-hover rounded-md mr-2 text-white p-1 cursor-pointer";
         }
@@ -199,16 +209,17 @@
             return "bg-disable rounded-md mr-2 text-white p-1 cursor-default";
         }
     }
-    private void OnRowClick(News news)
+
+    private void OnRowClick(clsFile selectedFile)
     {
-        if (newsServicies.SelectedNews == news)
+        if (newsServices.SelectedFile == selectedFile)
         {
-            newsServicies.SetSelectedNews(null); // Deselect the row if it's already selected
+            newsServices.SelectedFile = null; // Deselect the row if it's already selected
         }
 
         else
         {
-            newsServicies.SetSelectedNews(news); // Select the clicked row
+            newsServices.SelectedFile = selectedFile; // Select the clicked row
         }
     }
 

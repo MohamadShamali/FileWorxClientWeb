@@ -1,11 +1,13 @@
-﻿namespace Web_Fileworx_Client.Models
+﻿using FileworxObjectClassLibrary;
+
+namespace Web_Fileworx_Client.Models
 {
     public class UsersServices
     {
         private StreamReader? userReader;
         private StreamWriter? userWriter;
         public List<User> allUsers = new List<User>();
-        public User? loggedInUser = null;
+        public clsUser LoggedInUser { get; set; }
         public User SelectedUser = null;
 
         public void RemoveUser(User user)
@@ -63,18 +65,6 @@
             }
         }
 
-        public User? CheckLogInInfo(string? username, string? password)
-        {
-            foreach (User user in allUsers)
-            {
-                if((user.UserName == username) && (user.Password == password))
-                {
-                    loggedInUser = user;
-                    return user;
-                }
-            }
-            return null;
-        }
 
     }
 }

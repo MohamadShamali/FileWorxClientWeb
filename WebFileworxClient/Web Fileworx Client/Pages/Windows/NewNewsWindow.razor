@@ -1,4 +1,4 @@
-﻿
+﻿@inject UsersServices usersServices
 
 <div class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-10">
     <div class=" w-[1000px] p-4 bg-white border-3 border-solid border-fw-blue rounded-md shadow-md">
@@ -41,13 +41,14 @@
 @code {
 
     [Parameter]
-    public EventCallback<News> OnSave { get; set; }
+    public EventCallback<clsNews> OnSave { get; set; }
 
     [Parameter]
     public EventCallback OnCancel { get; set; }
 
     private bool showInvalidInfo = false;
 
+    // Binded
     private string title;
     private string description;
     private string catagory = "General";
@@ -68,9 +69,14 @@
 
         else
         {
-            Guid guid = Guid.NewGuid();
-            string[] addedNewsInfo = { title, description, body, DateTime.Now.ToString(), guid.ToString(), catagory};
-            News addedNews = new News(addedNewsInfo);
+            clsNews addedNews = new clsNews()
+            {
+                Id=Guid.NewGuid(), Class= clsBusinessObject.Type.News,
+                Name = title, Description = description, Category = catagory, Body = body, 
+                CreatorId = usersServices.LoggedInUser.Id, 
+                CreatorName=usersServices.LoggedInUser.CreatorName
+            };
+            addedNews.Read();
             await OnSave.InvokeAsync(addedNews);
         }
     }

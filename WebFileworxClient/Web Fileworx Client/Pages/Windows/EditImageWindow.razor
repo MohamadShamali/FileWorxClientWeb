@@ -1,4 +1,5 @@
-﻿@inject NewsServices newsServicies
+﻿@inject NewsServices newsServices
+@inject UsersServices usersServices
 
 <div class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-10">
     <div class=" w-[1000px] p-4 bg-white border-3 border-solid border-fw-blue rounded-md shadow-md min-h-[650px] relative">
@@ -54,21 +55,21 @@
 
 @code {
     [Parameter]
-    public EventCallback<Image> OnSave { get; set; }
+    public EventCallback<clsPhoto> OnSave { get; set; }
 
     [Parameter]
     public EventCallback OnCancel { get; set; }
 
-    private Image selectedImage;
+    private clsPhoto selectedPhoto;
 
     protected override void OnInitialized()
     {
-        selectedImage = (Image) newsServicies.SelectedNews;
+        selectedPhoto = (clsPhoto) newsServices.SelectedFile;
 
-        title = selectedImage.Title;
-        description = selectedImage.Description;
-        body = selectedImage.Body;
-        imagePath = selectedImage.ImagePath;
+        title = selectedPhoto.Name;
+        description = selectedPhoto.Description;
+        body = selectedPhoto.Body;
+        imagePath = selectedPhoto.Location;
 
         base.OnInitialized();
     }
@@ -105,7 +106,7 @@
         showBodySection = false;
     }
 
-    private async Task loadFiles(InputFileChangeEventArgs e)
+    private void loadFiles(InputFileChangeEventArgs e)
     {
         errors.Clear();
         Ifile = e.File;
@@ -117,16 +118,13 @@
         {
             if (Ifile != null)
             {
-                newsServicies.RemoveImageImage(selectedImage);
-
                 newImagePath = Path.Combine(EditBeforeRun.ImagesFiles, guid.ToString() + Path.GetExtension(Ifile.Name));
-                imagePath = newImagePath;
+                
                 await using FileStream fs = new(newImagePath, FileMode.Create);
                 await Ifile.OpenReadStream(maxFileSize).CopyToAsync(fs);
-
             }
         }
-
+         
         catch (Exception ex)
         {
             errors.Add($"File: {Ifile.Name} Error: {ex.Message}");
@@ -154,13 +152,11 @@
 
     private async Task saveRequest()
     {
-        Guid guid = Guid.NewGuid();
-
-        newsServicies.RemoveImageTextFile(selectedImage);
+        Guid guid = newsServices.SelectedFile.Id;
 
         if(Ifile != null)
         {
-            saveImage(guid);
+            saveImage(Guid.NewGuid());
         }
 
         if ((title == String.Empty) || (title == null) || (description == String.Empty) || (description == null) || (body == String.Empty) || (body == null))
@@ -170,9 +166,21 @@
 
         else
         {
-            string[] addedImageInfo = { title, description, body, DateTime.Now.ToString(), guid.ToString(), String.Empty, imagePath };
-            Image addedNews = new Image(addedImageInfo);
-            await OnSave.InvokeAsync(addedNews);
+            clsPhoto editedPhoto = new clsPhoto()
+            {
+             Id = newsServices.SelectedFile.Id
+            };
+
+            editedPhoto.Read();
+
+            editedPhoto.Name = title;
+            editedPhoto.Description = description;
+            editedPhoto.Location = newImagePath;
+            editedPhoto.Body = body;
+            editedPhoto.LastModifierId = usersServices.LoggedInUser.Id;
+            editedPhoto.LastModifierName = usersServices.LoggedInUser.Name;
+
+            await OnSave.InvokeAsync(editedPhoto);
         }
     }
 

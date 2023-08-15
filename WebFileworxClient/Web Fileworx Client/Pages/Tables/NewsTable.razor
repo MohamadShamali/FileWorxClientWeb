@@ -1,4 +1,4 @@
-﻿@inject NewsServices newsServicies
+﻿@inject NewsServices newsServices
 
 <div class="table-container">
     <table class="w-full mt-2">
@@ -10,9 +10,9 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var news in allNews)
+        @foreach (var file in newsServices.AllFiles)
         {
-            <NewsItem News="news" IsSelected="@IsNewsSelected(news)" RowClick="OnRowClick"/>
+                <NewsItem File="file" IsSelected="@isFileSelected(file)" RowClick="OnRowClick" />
         }
     </tbody>
 </table>
@@ -20,20 +20,18 @@
 
 @code {
 
-    private bool IsNewsSelected(News news)
+    private bool isFileSelected(clsFile file)
     {
-        return newsServicies.SelectedNews == news;
+        return newsServices.SelectedFile == file;
     }
 
     [Parameter]
-    public EventCallback<News> OnRowClick { get; set; }
+    public EventCallback<clsFile> OnRowClick { get; set; }
 
-    private List<News> allNews = new List<News>();
 
     protected override void OnInitialized()
     {
-        newsServicies.RefreshNews();
-        allNews = newsServicies.GetAllNews();
+        newsServices.AddDBFilesToFilesList();
         base.OnInitialized();
     }
 

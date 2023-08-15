@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vcLRxYCGgGpKjUcxW+ghV7n1GCpcbJjSGBnt91o4RY8=",
+  "Hash": "IP/DOZ8jneVrURVuHdtoKkIGfY2t+1rH9wZJz1qrNlk=",
   "Source": "Web Fileworx Client",
   "BasePath": "_content/Web Fileworx Client",
   "Mode": "Default",
@@ -935,23 +935,6 @@
       "OriginalItemSpec": "wwwroot\\Images\\download.png"
     },
     {
-      "Identity": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\Images\\News Images\\6580a369-8b6b-4733-8045-4fad26f8dcae.jpg",
-      "SourceId": "Web Fileworx Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\",
-      "BasePath": "_content/Web Fileworx Client",
-      "RelativePath": "Images/News Images/6580a369-8b6b-4733-8045-4fad26f8dcae.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\News Images\\6580a369-8b6b-4733-8045-4fad26f8dcae.jpg"
-    },
-    {
       "Identity": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\Images\\ShowedImage\\FileWorx\\5d25da19-af7a-40d1-874d-4c7de542a6d3.jpg",
       "SourceId": "Web Fileworx Client",
       "SourceType": "Discovered",
@@ -967,6 +950,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ShowedImage\\FileWorx\\5d25da19-af7a-40d1-874d-4c7de542a6d3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\Images\\StoredImages\\5cc74a80-a2df-472b-8116-f5bab6ebf4c0.jpg",
+      "SourceId": "Web Fileworx Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\",
+      "BasePath": "_content/Web Fileworx Client",
+      "RelativePath": "Images/StoredImages/5cc74a80-a2df-472b-8116-f5bab6ebf4c0.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\StoredImages\\5cc74a80-a2df-472b-8116-f5bab6ebf4c0.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\Images\\StoredImages\\6092afaf-96cb-48d5-9295-73b422cfa814.jpg",
+      "SourceId": "Web Fileworx Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\M.AL-Shamali\\Desktop\\Demo Projects\\Web Fileworx Client\\WebFileworxClient\\Web Fileworx Client\\wwwroot\\",
+      "BasePath": "_content/Web Fileworx Client",
+      "RelativePath": "Images/StoredImages/6092afaf-96cb-48d5-9295-73b422cfa814.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\StoredImages\\6092afaf-96cb-48d5-9295-73b422cfa814.jpg"
     }
   ]
 }
