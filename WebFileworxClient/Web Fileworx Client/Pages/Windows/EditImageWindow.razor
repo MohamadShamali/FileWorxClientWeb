@@ -60,7 +60,22 @@
     [Parameter]
     public EventCallback OnCancel { get; set; }
 
+    // Binded
     private clsPhoto selectedPhoto;
+    private string title;
+    private string description;
+    private string body;
+    IBrowserFile Ifile = null;
+    private string newImagePath;
+
+    // Display
+    private bool showInvalidInfo = false;
+    private bool showBodySection = true;
+    private bool showImageSection = false;
+
+    // Other
+    private long maxFileSize = 1024 * 1024 * 5;
+    private List<string> errors = new();
 
     protected override void OnInitialized()
     {
@@ -69,30 +84,9 @@
         title = selectedPhoto.Name;
         description = selectedPhoto.Description;
         body = selectedPhoto.Body;
-        imagePath = selectedPhoto.Location;
 
         base.OnInitialized();
     }
-
-    private bool showInvalidInfo = false;
-
-    private string title;
-    private string description;
-    private string body;
-    private string imagePath;
-
-    private string newImagePath;
-    IBrowserFile Ifile = null;
-
-    List<string> gg = new List<string>();
-
-    private long maxFileSize = 1024 * 1024 * 5;
-    private List<string> errors = new();
-
-    private bool showBodySection = true;
-    private bool showImageSection = false;
-
-    private string showedImagePath;
 
     private void ToggleBodySection()
     {
@@ -112,7 +106,7 @@
         Ifile = e.File;
     }
 
-    private async Task saveImage(Guid guid)
+    private async Task saveNewImage(Guid guid)
     {
         try
         {
@@ -172,8 +166,8 @@
 
             if (Ifile != null)
             {
-                File.Delete(editedPhoto.Location);
-                await saveImage(oldguid);
+                File.Delete(editedPhoto.Location); // Delete old Image
+                await saveNewImage(oldguid); //Save New Image with the same name and path
             }
 
             editedPhoto.Name = title;

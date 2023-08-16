@@ -69,6 +69,19 @@
     //Delete Confirmation
     private bool confirmDelete = false;
 
+    private void OnRowClick(clsFile selectedFile)
+    {
+        if (newsServices.SelectedFile == selectedFile)
+        {
+            newsServices.SelectedFile = null; // Deselect the row if it's already selected
+        }
+
+        else
+        {
+            newsServices.SelectedFile = selectedFile; // Select the clicked row
+        }
+    }
+
     private void openAdminTab()
     {
         string url = navnManager.BaseUri + "admin"; 
@@ -80,31 +93,14 @@
         showDeleteConfirmationWindow = true;
     }
 
-    private void onConfirmDelete()
+    private void addNewsRequest()
     {
-        confirmDelete = true;
+        showAddNewsWindow = true;
+    }
 
-        if (newsServices.SelectedFile != null)
-        {
-            if (newsServices.SelectedFile is clsPhoto)
-            {
-                clsPhoto selectedPhoto = (clsPhoto) newsServices.SelectedFile;
-
-                selectedPhoto.Delete();
-            }
-
-            else
-            {
-                clsNews selectedNews = (clsNews) newsServices.SelectedFile;
-
-                selectedNews.Delete();
-            }
-            newsServices.SelectedFile = null;
-            newsServices.RefreshFilesList();
-        }
-
-        confirmDelete = false;
-        showDeleteConfirmationWindow = false;
+    private void addImageRequest()
+    {
+        showAddImageWindow = true;
     }
 
     private void editRequest()
@@ -130,6 +126,33 @@
 
         showEditNewsWindow = false;
         showEditImageWindow = false;
+    }
+
+    private void onConfirmDelete()
+    {
+        confirmDelete = true;
+
+        if (newsServices.SelectedFile != null)
+        {
+            if (newsServices.SelectedFile is clsPhoto)
+            {
+                clsPhoto selectedPhoto = (clsPhoto)newsServices.SelectedFile;
+
+                selectedPhoto.Delete();
+            }
+
+            else
+            {
+                clsNews selectedNews = (clsNews)newsServices.SelectedFile;
+
+                selectedNews.Delete();
+            }
+            newsServices.SelectedFile = null;
+            newsServices.RefreshFilesList();
+        }
+
+        confirmDelete = false;
+        showDeleteConfirmationWindow = false;
     }
 
     private void onAddNews(clsNews addedNews)
@@ -164,21 +187,23 @@
         showEditImageWindow = false;
     }
 
-    private void addNewsRequest()
-    {
-        showAddNewsWindow = true;
-    }
-
-    private void addImageRequest()
-    {
-        showAddImageWindow = true;
-    }
-
     private string removeButtonClass()
     {
         if (newsServices.SelectedFile != null)
         {
             return "bg-rid hover:bg-rid-hover rounded-md mr-2 text-white p-1 cursor-pointer";
+        }
+        else
+        {
+            return "bg-disable rounded-md mr-2 text-white p-1 cursor-default";
+        }
+    }
+
+    private string editButtonClass()
+    {
+        if (newsServices.SelectedFile != null)
+        {
+            return "bg-fw-blue hover:bg-fw-blue-hover rounded-md mr-2 text-white p-1 cursor-pointer";
         }
         else
         {
@@ -195,31 +220,6 @@
         else
         {
             return true;
-        }
-    }
-
-    private string editButtonClass()
-    {
-        if (newsServices.SelectedFile != null)
-        {
-            return "bg-fw-blue hover:bg-fw-blue-hover rounded-md mr-2 text-white p-1 cursor-pointer";
-        }
-        else
-        {
-            return "bg-disable rounded-md mr-2 text-white p-1 cursor-default";
-        }
-    }
-
-    private void OnRowClick(clsFile selectedFile)
-    {
-        if (newsServices.SelectedFile == selectedFile)
-        {
-            newsServices.SelectedFile = null; // Deselect the row if it's already selected
-        }
-
-        else
-        {
-            newsServices.SelectedFile = selectedFile; // Select the clicked row
         }
     }
 

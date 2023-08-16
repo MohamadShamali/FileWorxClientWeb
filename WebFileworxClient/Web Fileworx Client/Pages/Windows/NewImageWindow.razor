@@ -67,21 +67,16 @@
     private string description;
     private string body;
     private string newImagePath;
+        IBrowserFile Ifile =null;
 
     // Display
     private bool showInvalidInfo = false;
-
-    IBrowserFile Ifile =null;
-
-    List<string> gg = new List<string>();
-
-    private long maxFileSize = 1024 * 1024 * 5;
-    private List<string> errors = new();
-
     private bool showBodySection = true;
     private bool showImageSection = false;
 
-    private string showedImagePath;
+    // Other
+    private long maxFileSize = 1024 * 1024 * 5;
+    private List<string> errors = new();
 
     private void ToggleBodySection()
     {
