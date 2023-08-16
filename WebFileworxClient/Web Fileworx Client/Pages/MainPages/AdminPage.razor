@@ -36,6 +36,10 @@
 {
     <Error Title="Admin Delete Attempt" Message="You can not delete the admin username" OnClose="onCloseErrorWindow"></Error>
 }
+@if (showFileErrorWindow)
+{
+    <Error Title="Error" Message="an Error Ocured during process, make sure not to use sprcial characters" OnClose="onCloseError"></Error>
+}
 
 @code {
 
@@ -45,6 +49,7 @@
     private bool showDeleteUserConfirmation = false;
     private bool showDuplicatedUsernameErrorWindow = false;
     private bool showDeleteAdminErrorWindow = false;
+    private bool showFileErrorWindow = false;
 
     private void onRemoveUser()
     {
@@ -85,13 +90,7 @@
         showEditUserWindow = false;
     }
 
-    private void onCloseErrorWindow()
-    {
-        showDuplicatedUsernameErrorWindow = false;
-        showDeleteAdminErrorWindow = false;
-    }
-
-    private void onAddUser (clsUser addedUser)
+    private void onAddUser(clsUser addedUser)
     {
         try
         {
@@ -105,15 +104,42 @@
             if (ex.Message.Contains("Duplicated username"))
                 showDuplicatedUsernameErrorWindow = true;
 
+            else
+                showFileErrorWindow = true;
+
         }
     }
 
     private void onEditUser(clsUser editedUser)
     {
-        editedUser.Update();
-        usersServices.RefreshUsersList();
+        try
+        {
+            editedUser.Update();
+            usersServices.RefreshUsersList();
 
-        showEditUserWindow = false;
+            showEditUserWindow = false;
+        }
+        catch (Exception ex)
+        {
+            if (ex.Message.Contains("Duplicated username"))
+                showDuplicatedUsernameErrorWindow = true;
+
+            else
+                showFileErrorWindow = true;
+
+        }
+
+    }
+
+    private void onCloseErrorWindow()
+    {
+        showDuplicatedUsernameErrorWindow = false;
+        showDeleteAdminErrorWindow = false;
+    }
+    
+    private void onCloseError()
+    {
+        showFileErrorWindow = false;
     }
 
     private string editButtonClass()

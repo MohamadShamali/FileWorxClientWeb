@@ -43,14 +43,15 @@
     [Parameter]
     public EventCallback OnCancel { get; set; }
 
-    private bool showInvalidInfo = false;
-
+    // Binded
     private string name;
     private string username;
     private string password;
     private string isAdmin = "False";
 
-    private bool isSelectedUserAdmin;
+    // Display
+    private bool showInvalidInfo = false;
+    private bool isSelectedUserAdmin =false;
 
     protected override void OnInitialized()
     {

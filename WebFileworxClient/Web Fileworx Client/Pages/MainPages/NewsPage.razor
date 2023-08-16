@@ -53,7 +53,10 @@
 {
     <EditImageWindow OnSave="onEditImage" OnCancel="onCancel"> </EditImageWindow>
 }
-
+@if (showFileErrorWindow)
+{
+    <Error Title="Error" Message="an Error Ocured during process, make sure not to use sprcial characters" OnClose="onCloseError"></Error>
+}
 @code {
 
     // Windows Appearance
@@ -62,6 +65,7 @@
     private bool showDeleteConfirmationWindow = false;
     private bool showEditNewsWindow = false;
     private bool showEditImageWindow = false;
+    private bool showFileErrorWindow = false;
 
     // Details Appearance
     private bool showdetails = true;
@@ -128,6 +132,11 @@
         showEditImageWindow = false;
     }
 
+    private void onCloseError()
+    {
+        showFileErrorWindow = false;
+    }
+
     private void onConfirmDelete()
     {
         confirmDelete = true;
@@ -157,34 +166,66 @@
 
     private void onAddNews(clsNews addedNews)
     {
-        addedNews.Insert();
-        newsServices.RefreshFilesList();
+        try
+        {
+            addedNews.Insert();
+            newsServices.RefreshFilesList();
 
-        showAddNewsWindow = false;
+            showAddNewsWindow = false;
+        }
+        catch
+        {
+            showFileErrorWindow = true;
+        }
+
     }
 
     private void onEditNews(clsNews editedNews)
     {
-        editedNews.Update();
-        newsServices.RefreshFilesList();
+        try
+        {
+            editedNews.Update();
+            newsServices.RefreshFilesList();
 
-        showEditNewsWindow = false;
+            showEditNewsWindow = false;
+        }
+        catch
+        {
+            showFileErrorWindow = true;
+        }
     }
 
     private void onAddImage(clsPhoto addedPhoto)
     {
-        addedPhoto.Insert();
-        newsServices.RefreshFilesList();
+        try
+        {
+            addedPhoto.Insert();
+            newsServices.RefreshFilesList();
 
-        showAddImageWindow = false;
+            showAddImageWindow = false;
+        }
+
+        catch
+        {
+            showFileErrorWindow = true;
+        }
+
     }
 
     private void onEditImage(clsPhoto editedPhoto)
     {
-        editedPhoto.Update();
-        newsServices.RefreshFilesList();
-       
-        showEditImageWindow = false;
+        try
+        {
+            editedPhoto.Update();
+            newsServices.RefreshFilesList();
+
+            showEditImageWindow = false;
+        }
+
+        catch
+        {
+            showFileErrorWindow = true;
+        }
     }
 
     private string removeButtonClass()

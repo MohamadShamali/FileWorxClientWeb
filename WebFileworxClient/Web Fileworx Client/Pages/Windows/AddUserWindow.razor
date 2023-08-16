@@ -33,7 +33,7 @@
 
 @if (showInvalidInfo)
 {
-    <InvalidInfoWindow OnClose="hideInvalidInfo" />
+    <InvalidInfoWindow Title="Empty Fields" OnClose="hideInvalidInfo" />
 }
 
 @code {
@@ -75,8 +75,9 @@
                     Name = name,
                     Username = username,
                     Password = password,
-                    IsAdmin = (isAdmin=="True")? true:false,
-                };
+                    IsAdmin = (isAdmin == "True") ? true : false,
+                    Class = clsBusinessObject.Type.User
+        };
 
             await OnSave.InvokeAsync(addedUser);
         }

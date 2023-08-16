@@ -52,7 +52,7 @@
 
 @if (showInvalidInfo)
 {
-    <InvalidInfoWindow OnClose="hideInvalidInfo" />
+    <InvalidInfoWindow Title="Empty Fields" OnClose="hideInvalidInfo" />
 }
 
 @code {
@@ -158,7 +158,8 @@
                     Location = newImagePath,
                     Body = body,
                     CreatorId = usersServices.LoggedInUser.Id,
-                    CreatorName = usersServices.LoggedInUser.CreatorName
+                    CreatorName = usersServices.LoggedInUser.CreatorName,
+                    Class = clsBusinessObject.Type.Photo
                 };
             addedPhoto.Read();
             await OnSave.InvokeAsync(addedPhoto);

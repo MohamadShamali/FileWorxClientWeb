@@ -35,7 +35,7 @@
 
 @if(showInvalidInfo)
 {
-    <InvalidInfoWindow OnClose="hideInvalidInfo" />
+    <InvalidInfoWindow Title="Empty Fields" OnClose="hideInvalidInfo" />
 }
 
 @code {
@@ -76,7 +76,7 @@
                 Name = title, Description = description, Category = catagory, Body = body, 
                 CreatorId = usersServices.LoggedInUser.Id, 
                 CreatorName=usersServices.LoggedInUser.CreatorName
-            };
+                };
             addedNews.Read();
             await OnSave.InvokeAsync(addedNews);
         }
