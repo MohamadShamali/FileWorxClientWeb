@@ -43,7 +43,7 @@
             {
                 clsPhoto selectedPhoto = (clsPhoto) selectedFile;
                 string imageName = Path.GetFileName(selectedPhoto.Location);
-                <img class="w-full" src="\Images\StoredImages\@imageName" alt="Image" />
+                <img class="w-full" src="\Images\StoredImages\@imageName?cacheBuster=@DateTime.Now.Ticks" alt="Image" />
             }
             else
             {

@@ -84,9 +84,10 @@
         else
         {
             clsNews editedNews = new clsNews()
-                {
-                    Id = newsServicies.SelectedFile.Id
-                };
+            {
+                Id = newsServicies.SelectedFile.Id
+            };
+
             editedNews.Read();
 
             editedNews.Name = title;

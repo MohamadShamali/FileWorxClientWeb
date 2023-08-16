@@ -156,11 +156,11 @@
         showAddImageWindow = false;
     }
 
-    private void onEditImage(clsPhoto addedPhoto)
+    private void onEditImage(clsPhoto editedPhoto)
     {
-        addedPhoto.Update();
+        editedPhoto.Update();
         newsServices.RefreshFilesList();
-
+       
         showEditImageWindow = false;
     }
 

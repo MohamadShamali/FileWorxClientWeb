@@ -119,12 +119,12 @@
             if (Ifile != null)
             {
                 newImagePath = Path.Combine(EditBeforeRun.ImagesFiles, guid.ToString() + Path.GetExtension(Ifile.Name));
-                
+
                 await using FileStream fs = new(newImagePath, FileMode.Create);
                 await Ifile.OpenReadStream(maxFileSize).CopyToAsync(fs);
             }
         }
-         
+
         catch (Exception ex)
         {
             errors.Add($"File: {Ifile.Name} Error: {ex.Message}");
@@ -152,13 +152,6 @@
 
     private async Task saveRequest()
     {
-        Guid guid = newsServices.SelectedFile.Id;
-
-        if(Ifile != null)
-        {
-            saveImage(Guid.NewGuid());
-        }
-
         if ((title == String.Empty) || (title == null) || (description == String.Empty) || (description == null) || (body == String.Empty) || (body == null))
         {
             showInvalidInfo = true;
@@ -166,16 +159,25 @@
 
         else
         {
+
             clsPhoto editedPhoto = new clsPhoto()
-            {
-             Id = newsServices.SelectedFile.Id
-            };
+                {
+                    Id = newsServices.SelectedFile.Id
+                };
 
             editedPhoto.Read();
 
+            Guid oldguid = newsServices.SelectedFile.Id;
+            Guid newGuid = Guid.NewGuid();
+
+            if (Ifile != null)
+            {
+                File.Delete(editedPhoto.Location);
+                await saveImage(oldguid);
+            }
+
             editedPhoto.Name = title;
             editedPhoto.Description = description;
-            editedPhoto.Location = newImagePath;
             editedPhoto.Body = body;
             editedPhoto.LastModifierId = usersServices.LoggedInUser.Id;
             editedPhoto.LastModifierName = usersServices.LoggedInUser.Name;
