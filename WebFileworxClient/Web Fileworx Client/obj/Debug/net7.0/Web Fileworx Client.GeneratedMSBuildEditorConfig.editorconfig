@@ -36,8 +36,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZ5V2luZG93c1xEZWxldGVDb25maXJtYXRpb25XaW5kb3cucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/M.AL-Shamali/Desktop/Demo Projects/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/NotifyWindows/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZ5V2luZG93c1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/M.AL-Shamali/Desktop/Demo Projects/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/NotifyWindows/InvalidInfoWindow.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZ5V2luZG93c1xJbnZhbGlkSW5mb1dpbmRvdy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/M.AL-Shamali/Desktop/Demo Projects/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/NotifyWindows/UserDeleteConfirmationWindow.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWZ5V2luZG93c1xVc2VyRGVsZXRlQ29uZmlybWF0aW9uV2luZG93LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/M.AL-Shamali/Desktop/Demo Projects/Web Fileworx Client/WebFileworxClient/Web Fileworx Client/Pages/RazorComponents/NewsDetails.razor]

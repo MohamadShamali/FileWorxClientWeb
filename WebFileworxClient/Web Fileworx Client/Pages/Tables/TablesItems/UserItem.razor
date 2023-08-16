@@ -2,19 +2,19 @@
 
 <tr @onclick="() => RowClick.InvokeAsync(user)" class=@GetRowClass()>
     <td class="p-2 border border-gray-300">@user.Name</td>
-    <td class="p-2 border border-gray-300">@user.UserName</td>
+    <td class="p-2 border border-gray-300">@user.Username</td>
     <td class="p-2 border border-gray-300">@user.IsAdmin.ToString()</td>
 </tr>
 
 @code {
     [Parameter]
-    public User user { get; set; }
+    public clsUser user { get; set; }
 
     [Parameter]
     public bool IsSelected { get; set; }
 
     [Parameter]
-    public EventCallback<User> RowClick { get; set; }
+    public EventCallback<clsUser> RowClick { get; set; }
 
 
     private string GetRowClass()

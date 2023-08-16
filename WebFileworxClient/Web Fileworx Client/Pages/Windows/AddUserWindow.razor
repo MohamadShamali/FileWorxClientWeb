@@ -1,4 +1,4 @@
-﻿
+﻿@inject UsersServices usersServices
 
 <div class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-10">
     <div class="p-4 bg-white border-3 border-solid border-fw-blue rounded-md shadow-md min-w-[1000px]">
@@ -20,8 +20,8 @@
         <div>
             <label class="font-semibold" for="isadmin">Is Admin:</label>
             <select @bind=isAdmin class="p-2.5 border-solid border-gray-300 w-full border-2">
-                <option value="false">No</option>
-                <option value="true">Yes</option>
+                <option value="False">No</option>
+                <option value="True">Yes</option>
             </select>
         </div>
         <div class="flex justify-end gap-x-2 mt-4">
@@ -38,19 +38,19 @@
 
 @code {
     [Parameter]
-    public EventCallback<User> OnSave { get; set; }
+    public EventCallback<clsUser> OnSave { get; set; }
 
     [Parameter]
     public EventCallback OnCancel { get; set; }
 
-    private bool showInvalidInfo = false;
-
+    // Binded
     private string name;
     private string username;
     private string password;
-    private string isAdmin="false";
+    private string isAdmin="False";
 
-
+    // Display
+    private bool showInvalidInfo = false;
 
     private async Task cancelRequest()
     {
@@ -67,9 +67,17 @@
 
         else
         {
-            Guid guid = Guid.NewGuid();
-            string[] addedUserInfo = { name, username, password, guid.ToString(), isAdmin };
-            User addedUser = new User(addedUserInfo);
+            clsUser addedUser = new clsUser()
+                {
+                    Id = Guid.NewGuid(),
+                    CreatorId = usersServices.LoggedInUser.Id,
+                    CreatorName = usersServices.LoggedInUser.Name,
+                    Name = name,
+                    Username = username,
+                    Password = password,
+                    IsAdmin = (isAdmin=="True")? true:false,
+                };
+
             await OnSave.InvokeAsync(addedUser);
         }
     }

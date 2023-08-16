@@ -10,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var user in usersServicies.allUsers)
+        @foreach (var user in usersServicies.AllUsers)
         {
                 <UserItem RowClick="OnRowClick" IsSelected="@IsUserSelected(user)" user="user" />
         }
@@ -19,17 +19,17 @@
 </div>
 
 @code {
-    private bool IsUserSelected(User user)
+    private bool IsUserSelected(clsUser user)
     {
         return usersServicies.SelectedUser == user;
     }
 
     [Parameter]
-    public EventCallback<User> OnRowClick { get; set; }
+    public EventCallback<clsUser> OnRowClick { get; set; }
 
     protected override void OnInitialized()
     {
-        usersServicies.RefreshUsers();
+        usersServicies.RefreshUsersList();
         base.OnInitialized();
     }
 }
